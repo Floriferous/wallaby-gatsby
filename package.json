@@ -19,6 +19,9 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@babel/register": "^7.10.4",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
     "prettier": "2.0.5"
   },
   "keywords": [
@@ -32,7 +35,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "NODE_ENV=test mocha -r @babel/register 'src/**/*.test.js'"
   },
   "repository": {
     "type": "git",
